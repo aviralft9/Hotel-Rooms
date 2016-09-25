@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Angular practice</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="practice.js"></script>
+</head>
+<body>
+    <div ng-controller="mainController">
+		
+		<h1>Rooms available</h1>
+		Add room:
+		<input type="text" ng-model="roomNo"><br />
+		Enter the number of bed in it:
+		<input type="text" ng-model="bed"><br />
+		<button ng-click="calculate()">Add room</button><br />
+
+
+		Available rooms right now:
+		<ul>
+			<li ng-repeat="room in rooms">
+				{{room.roomNo}} with {{room.bed}} beds
+			</li>
+		</ul> 
+	
+	</div>	
+
+</body>
+</html>
